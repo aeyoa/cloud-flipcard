@@ -1,0 +1,39 @@
+.view {
+    perspective: 800px;
+}
+
+.card {
+    transform: rotateY(0deg);
+    position: relative;
+    margin: 50px;
+}
+
+.face {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    width: 400px;
+    height: 200px;
+    background-color: #000;
+}
+
+.back {
+    -webkit-transform: rotateY(-180deg);
+    /* position: absolute; */
+    top: 0px;
+    left: 0px;
+}
+
+p {
+    color: #fff;
+    font-size: 40px;
+    font-family: Helvetica;
+
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
