@@ -37,3 +37,25 @@ p {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+textarea {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    overflow: auto;
+    resize: none;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 40px;
+}
+textarea:focus {
+    outline:0;
+    outline:none;
+    -moz-appearance:none;
+}
