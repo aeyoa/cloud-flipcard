@@ -20,9 +20,11 @@
 
 .back {
     -webkit-transform: rotateY(-180deg);
-    /* position: absolute; */
-    top: 0px;
+     position: relative;
+    top: -240px;
     left: 0px;
+    background-color: darkslategray;
+    z-index: -1;
 }
 
 p {
