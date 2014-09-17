@@ -1,48 +1,75 @@
-.view {
-    perspective: 800px;
+body {
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.card-translate {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+/*.card-translate {*/
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*left: 520px;*/
+/*}*/
+
+.flip {
+    -webkit-perspective: 800;
+    width: 400px;
+    height: 200px;
+    position: relative;
+    margin: 250px auto;
+}
+
+.flipped {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
 }
 
 .card {
-    transform: rotateY(0deg);
-    position: relative;
-    margin: 50px;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
 }
 
 .face {
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    z-index: 2;
+    font-family: Helvetica;
+    font-size: 3em;
+    text-align: center;
+    line-height: 200px;
+}
 
-    width: 400px;
-    height: 200px;
-    background-color: #000;
+.front {
+    position: absolute;
+    z-index: 1;
+    background: #444;
+    color: white;
+    cursor: pointer;
 }
 
 .back {
-    -webkit-transform: rotateY(-180deg);
-     position: relative;
-    top: -240px;
-    left: 0px;
-    background-color: darkslategray;
-    z-index: -1;
-}
-
-p {
-    color: #fff;
-    font-size: 40px;
-    font-family: Helvetica;
-
-    text-align: center;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -webkit-transform: rotatey(-180deg);
+    background: #444;
+    color: black;
+    cursor: pointer;
 }
 
 textarea {
     position: relative;
-    top: 50%;
+    top: 15%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -56,8 +83,9 @@ textarea {
     font-family: Helvetica;
     font-size: 40px;
 }
+
 textarea:focus {
-    outline:0;
-    outline:none;
-    -moz-appearance:none;
+    outline: 0;
+    outline: none;
+    -moz-appearance: none;
 }
